@@ -1,0 +1,139 @@
+<HTML>
+ <head>
+  <title> Learn NCIS rules </title>
+ <style>
+    body {background-color: #264d73}
+    .font {font-size:25px; font-family:Palatino; color:#ffffff; background-color:#264d73;}
+    .font2 {font-size:20px; font-family:Palatino; color:#ffffff; background-color:#264d73;}
+ </style>
+ </head>
+<body>
+    <img src="ncis learn.jpg" width=350px>
+    <div id=number class="font">Press Confirm To Start</div><br>
+    <input id=answer type="text" class="font"> <button id=confirm class="font" onclick="Confirm()">Confirm</button><br>
+    <div id=hint1 class="font2"></div><br>
+    <div id=hint2 class="font2"></div><br>
+    <div id=hint3 class="font2"></div><br><br>
+    <button id=hint class="font2" onclick="Hint()">Hint</button>
+<script>
+function MyKeyDownHandler (MyEvent){
+    if(MyEvent.keyCode==8){
+    a=answer.value;
+    setTimeout(backspace,50)}
+function backspace(){
+    c=(a.length)-1;
+    b=a.slice(0,c)
+    answer.value=b} }                                                              //backspace button
+var numbers=["Gibbs #1", "Gibbs #2", "Gibbs #3", "Gibbs #4", "Gibbs #5", "Gibbs #6", "Gibbs #7", "Gibbs #8", "Gibbs #9", "Gibbs #10", "Gibbs #11", "Gibbs #12", "Gibbs #13", "Gibbs #14", "Gibbs #15", "Gibbs #16", "Gibbs #18", "Gibbs #22", "Gibbs #23", "Gibbs #27", "Gibbs #35", "Gibbs #36", "Gibbs #38", "Gibbs #39", "Gibbs #40", "Gibbs #44", "Gibbs #45", "Gibbs #51", "Remember",
+"McGee #1","McGee #2","McGee #3","McGee #4","McGee #5","McGee #6","McGee #7","McGee #8","McGee #9","McGee #10","McGee #11","McGee #12",
+"Abby #1","Abby #2","Abby #3","Abby #4","Abby #5","Abby #6","Abby #7","Abby #8","Abby #9","Abby #10","Abby #11","Abby #12",
+"Ziva #1","Ziva #2","Ziva #3","Ziva #4",
+"DiNozzo #1","DiNozzo #2","DiNozzo #3","DiNozzo #4","DiNozzo #5","DiNozzo #6","DiNozzo #7","DiNozzo #8","DiNozzo #9","DiNozzo #10","DiNozzo #11","DiNozzo #12","DiNozzo #13","DiNozzo #14","DiNozzo #15","DiNozzo #16"]
+var rules=["Never screw over your partner.","Always wear gloves at a crime scene.","Never be unreachable.","The best way to keep a secret? Keep it to yourself. Second best? Tell one other person - if you must. There is no third best.","You don't waste good.","Never apologize - Its a sign of weakness. Except among friends.","Always be specific when you lie.","Never take anything for granted.",
+"Never go anywhere without a knife.","Never get personally involved on a case.","When the job is done, walk away.","Never date a coworker.","Never, ever involve a lawyer.","Bend the line, don't break it.","Always work as a team.","If someone thinks they have the upper-hand,…break it!","It's easier to seek forgiveness than ask permission.","Never, ever bother Gibbs in interrogation.",
+"Never mess with a Marine's coffee if you want to live.","Two ways to follow: First way, they never notice you, - second way, they only notice you.","Always watch the watchers.","If you feel like you're being played, you probably are.","Your case, your lead.","There is no such thing as coincidence.","If it seems someone is out to get you, they are.","First things first. Hide the women and children.",
+"Clean up your own mess.","Sometimes - You're Wrong!","a slap to the face is an insult - to the back of the head is a wake-up call.","When in doubt, speak geek.","When colleagues insist that the characters in your book are based upon them, repeat the word fiction as many times as possible.","When the computers don't work and the computer technicians won't work, fix them yourself.",
+"Always speak the truth.","Always be respectful and polite, no matter what the provocation.","Take all possible opportunities to get the revenge of the nerd, while maintaining very polite language.","Use vocabulary and implacable will to intimidate the person you interrogate.","Be willing to stand up to gang-leaders, by using your height to stare down upon them.",
+"Don't ask, so that they won't have to tell.","Avoid heights.","Avoid DiNozzo when around heights.","Always play the MIT card.","Never lie to Abby.","Remember her birthday.","Treat the team as family: desertion not permitted.","Scientists do not rely on luck.","Gibbs' gut is allowed to be lucky because he is not a scientist.","Don't forget to defrag your computer.","Trust the evidence.",
+"Trust Gibbs & the team!","Always keep a spare (Caf-Pow).","Dress codes are for other people.","Be kind to your equipment.","Be happy!","If it annoys you, kill it.","Attack first, ask questions later.","Drive fast; it's the best way to avoid roadside bombs.","Knives don't run out of bullets.","Never sit on the sidelines when your people need you.",
+"If a sexually attractive female is involved in the case ALWAYS hit on her.","Never underestimate your opponent.","Always seek out a movie analogy.","Take every opportunity to do a Tommy Lee Jones speech from the Fugitive.","When doing Tommy Lee Jones impressions, get the accent right.","Always defuse a situation with humour rather than resorting to authoritarianism.",
+"Always make sure your work is done but make it look like you are just lazing around.","Never ask a woman her weight on the first date.","Do not fall in love when working undercover.","Do not go undercover posing as the boyfriend of anyone.","Be very careful whom you tongue-kiss: it might be a man in disguise.","Never pick on a probie when he is down.",
+"Maintain the morale of the rest of the team, even when you have sufficient experience to be really very worried about Gibbs.","Develop a first name working relationship with the Director but defer to Gibbs","Don't drink the boss' coffee-ever."]
+var rules2=["Never screw over your partner","Always wear gloves at a crime scene","Never be unreachable","The best way to keep a secret Keep it to yourself Second best Tell one other person if you must There is no third best","You dont waste good","Never apologize  Its a sign of weakness Except among friends","Always be specific when you lie","Never take anything for granted",
+"Never go anywhere without a knife","Never get personally involved on a case","When the job is done walk away","Never date a coworker","Never ever involve a lawyer","Bend the line dont break it","Always work as a team","If someone thinks they have the upper hand break it","Its easier to seek forgiveness than ask permission","Never ever bother Gibbs in interrogation",
+"Never mess with a Marines coffee if you want to live","Two ways to follow First way they never notice you second way they only notice you","Always watch the watchers","If you feel like youre being played you probably are","Your case your lead","There is no such thing as coincidence","If it seems someone is out to get you they are","First things first Hide the women and children",
+"Clean up your own mess","Sometimes Youre Wrong","a slap to the face is an insult to the back of the head is a wake up call","When in doubt speak geek","When colleagues insist that the characters in your book are based upon them repeat the word fiction as many times as possible","When the computers dont work and the computer technicians wont work fix them yourself",
+"Always speak the truth","Always be respectful and polite no matter what the provocation","Take all possible opportunities to get the revenge of the nerd while maintaining very polite language","Use vocabulary and implacable will to intimidate the person you interrogate","Be willing to stand up to gang leaders by using your height to stare down upon them",
+"Dont ask so that they wont have to tell","Avoid heights","Avoid DiNozzo when around heights","Always play the MIT card","Never lie to Abby","Remember her birthday","Treat the team as family desertion not permitted","Scientists do not rely on luck","Gibbs gut is allowed to be lucky because he is not a scientist","Dont forget to defrag your computer","Trust the evidence",
+"Trust Gibbs & the team","Always keep a spare (Caf Pow)","Dress codes are for other people","Be kind to your equipment","Be happy","If it annoys you kill it","Attack first ask questions later","Drive fast its the best way to avoid roadside bombs","Knives dont run out of bullets","Never sit on the sidelines when your people need you",
+"If a sexually attractive female is involved in the case ALWAYS hit on her","Never underestimate your opponent","Always seek out a movie analogy","Take every opportunity to do a Tommy Lee Jones speech from the Fugitive","When doing Tommy Lee Jones impressions get the accent right","Always defuse a situation with humour rather than resorting to authoritarianism",
+"Always make sure your work is done but make it look like you are just lazing around","Never ask a woman her weight on the first date","Do not fall in love when working undercover","Do not go undercover posing as the boyfriend of anyone","Be very careful whom you tongue kiss it might be a man in disguise","Never pick on a probie when he is down",
+"Maintain the morale of the rest of the team even when you have sufficient experience to be really very worried about Gibbs","Develop a first name working relationship with the Director but defer to Gibbs","Dont drink the boss coffee ever"]
+var hinta=["partner","gloves","reachable","sercret","waste","apologize","lie","granted","knife","case","done","coworker","lawyer","the line","team","upper-hand","forgiveness","interrogation","coffee","follow","watchers","being played","case","coincidence","get you","women","mess","sometimes","slap","geek","fiction","computer","truth","respectful","revenge","vocabulary","stand up","don't ask",
+"heights","DiNozzo","MIT","lie","birthday","team","luck","Gibb's gut","defrag","evidence","Gibb's","Caf-Pow","dress","equipment","happy","annoys","questions","drive","knives","sidelines","female","opponent","movie","Tommy Lee Jones","accent","humour","work is done","weight","undercover","boyfriend","disguise","probie","morale","Director","boss's coffee"]
+var hintb=["_ _ _ _ _ /_ _ _ _ _ /_ _ _ _ /_ _ _ _ /_ _ _ _ _ _ _ .","_ _ _ _ _ _ /_ _ _ _ /_ _ _ _ _ _ /_ _ /_ /_ _ _ _ _ /_ _ _ _ _ .","_ _ _ _ _ /_ _ /_ _ _ _ _ _ _ _ _ _ _ .","_ _ _ /_ _ _ _ /_ _ _ /_ _ /_ _ _ _ /_ /_ _ _ _ _ _ ?/_ _ _ _ /_ _ /_ _ /_ _ _ _ _ _ _ _ ._ _ _ _ _ _ /_ _ _ _ ?/_ _ _ _ /_ _ _ /_ _ _ _ _ /_ _ _ _ _ _ /-/_ _ /_ _ _ /_ _ _ _ ./_ _ _ _ _ /_ _ /_ _ /_ _ _ _ _ /_ _ _ _ .",
+"_ _ _ /_ _ _ '_ /_ _ _ _ _ /_ _ _ _ .","_ _ _ _ _ /_ _ _ _ _ _ _ _ _ /—/_ _ _ /_ /_ _ _ _ /_ _ /_ _ _ _ _ _ _ _ ./_ _ _ _ _ _ /_ _ _ _ _ /_ _ _ _ _ _ _ .","_ _ _ _ _ _ /_ _ /_ _ _ _ _ _ _ _ /_ _ _ _ /_ _ _ /_ _ _ .","_ _ _ _ _ /_ _ _ _ /_ _ _ _ _ _ _ _ /_ _ _ /_ _ _ _ _ _ _ .","_ _ _ _ _ /_ _ /_ _ _ _ _ _ _ _ /_ _ _ _ _ _ _ /_ /_ _ _ _ _ .",
+"_ _ _ _ _ /_ _ _ /_ _ _ _ _ _ _ _ _ _ /_ _ _ _ _ _ _ _ /_ _ /_ /_ _ _ _ .","_ _ _ _ /_ _ _ /_ _ _ /_ _ /_ _ _ _ ,/_ _ _ _ /_ _ _ _ .","_ _ _ _ _ /_ _ _ _ /_ /_ _ _ _ _ _ _ _ .","_ _ _ _ _ ,/_ _ _ _ /_ _ _ _ _ _ _ /_ /_ _ _ _ _ _ .","_ _ _ _ /_ _ _ /_ _ _ _ ,/_ _ _ '_ /_ _ _ _ _ /_ _ .","_ _ _ _ _ _ /_ _ _ _ /_ _ /_ /_ _ _ _ .",
+"_ _ /_ _ _ _ _ _ _ /_ _ _ _ _ _ /_ _ _ _ /_ _ _ _ /_ _ _ /_ _ _ _ _ -_ _ _ _ ,…_ _ _ _ _ /_ _ !","_ _ '_ /_ _ _ _ _ _ /_ _ /_ _ _ _ /_ _ _ _ _ _ _ _ _ _ _ /_ _ _ _ /_ _ _ /_ _ _ _ _ _ _ _ _ _ .","_ _ _ _ _ ,/_ _ _ _ /_ _ _ _ _ _ /_ _ _ _ _ /_ _ /_ _ _ _ _ _ _ _ _ _ _ _ _ .",
+"_ _ _ _ _ /_ _ _ _ /_ _ _ _ /_ /_ _ _ _ _ _ '_ /_ _ _ _ _ _ /_ _ /_ _ _ /_ _ _ _ /_ _ /_ _ _ _ .","_ _ _ /_ _ _ _ /_ _ /_ _ _ _ _ _ :/_ _ _ _ _ /_ _ _ ,/_ _ _ _ /_ _ _ _ _ /_ _ _ _ _ _ /_ _ _ ,/—/_ _ _ _ _ _ /_ _ _ ,/_ _ _ _ /_ _ _ _ /_ _ _ _ _ _ /_ _ _ .","_ _ _ _ _ _ /_ _ _ _ _ /_ _ _ /_ _ _ _ _ _ _ _ .",
+"_ _ /_ _ _ /_ _ _ _ /_ _ _ _ /_ _ _ '_ _ /_ _ _ _ _ /_ _ _ _ _ _ ,/_ _ _ /_ _ _ _ _ _ _ _ /_ _ _ .","_ _ _ _ /_ _ _ _ ,/_ _ _ _ /_ _ _ _ .","_ _ _ _ _ /_ _ /_ _ /_ _ _ _ /_ _ _ _ _ /_ _ /_ _ _ _ _ _ _ _ _ _ _ .","_ _ /_ _ /_ _ _ _ _ /_ _ _ _ _ _ _ /_ _ /_ _ _ /_ _ /_ _ _ /_ _ _ ,/_ _ _ _ /_ _ _ .","_ _ _ _ _ /_ _ _ _ _ _ /_ _ _ _ _ ./_ _ _ _ /_ _ _ /_ _ _ _ _ /_ _ _ /_ _ _ _ _ _ _ _ .",
+"_ _ _ _ _ /_ _ /_ _ _ _ /_ _ _ /_ _ _ _ .","_ _ _ _ _ _ _ _ _ /—/_ _ _ '_ _ /_ _ _ _ _ !","_ /_ _ _ /_ _ /_ _ _ /_ _ _ _ /_ _ /_ _ /_ _ _ _ _ _ /—/_ _ /_ _ _ /_ _ _ _ /_ _ /_ _ _ /_ _ _ _ /_ _ /_ /_ _ _ _ -_ _ /_ _ _ _ .","_ _ _ _ /_ _ /_ _ _ _ _ ,/_ _ _ _ _ /_ _ _ _ .",
+"_ _ _ _ /_ _ _ _ _ _ _ _ _ _ /_ _ _ _ _ _ /_ _ _ _ /_ _ _ /_ _ _ _ _ _ _ _ _ _ /_ _ /_ _ _ _ /_ _ _ _ /_ _ _ /_ _ _ _ _ /_ _ _ _ /_ _ _ _ ,/_ _ _ _ _ _ /_ _ _ /_ _ _ _ /_ _ _ _ _ _ _ /_ _ /_ _ _ _ /_ _ _ _ _ /_ _ /_ _ _ _ _ _ _ _ .","_ _ _ _ /_ _ _ /_ _ _ _ _ _ _ _ _ /_ _ _ '_ /_ _ _ _ /_ _ _ /_ _ _ /_ _ _ _ _ _ _ _ /_ _ _ _ _ _ _ _ _ _ _ /_ _ _ '_ /_ _ _ _ ,/_ _ _ /_ _ _ _ /_ _ _ _ _ _ _ _ .",
+"_ _ _ _ _ _ /_ _ _ _ _ /_ _ _ /_ _ _ _ _ .","_ _ _ _ _ _ /_ _ /_ _ _ _ _ _ _ _ _ _ /_ _ _ /_ _ _ _ _ _ ,/_ _ /_ _ _ _ _ _ /_ _ _ _ /_ _ _ /_ _ _ _ _ _ _ _ _ _ _ .","_ _ _ _ /_ _ _ /_ _ _ _ _ _ _ _ /_ _ _ _ _ _ _ _ _ _ _ _ _ /_ _ /_ _ _ /_ _ _ /_ _ _ _ _ _ _ /_ _ /_ _ _ /_ _ _ _ ,/_ _ _ _ _ /_ _ _ _ _ _ _ _ _ _ _ /_ _ _ _ /_ _ _ _ _ _ /_ _ _ _ _ _ _ _ .","_ _ _ /_ _ _ _ _ _ _ _ _ _ /_ _ _ /_ _ _ _ _ _ _ _ _ _ /_ _ _ _ /_ _ /_ _ _ _ _ _ _ _ _ _ /_ _ _ /_ _ _ _ _ _ /_ _ _ /_ _ _ _ _ _ _ _ _ _ _ .",
+"_ _ /_ _ _ _ _ _ _ /_ _ /_ _ _ _ _ /_ _ /_ _ /_ _ _ _ -_ _ _ _ _ _ _ ,/_ _ /_ _ _ _ _ /_ _ _ _ /_ _ _ _ _ _ /_ _ /_ _ _ _ _ /_ _ _ _ /_ _ _ _ /_ _ _ _ .","_ _ _ '_ /_ _ _ ,/_ _ /_ _ _ _ /_ _ _ _ /_ _ _ '_ /_ _ _ _ /_ _ /_ _ _ _ .","_ _ _ _ _ /_ _ _ _ _ _ _ .","_ _ _ _ _ /_ _ _ _ _ _ _ /_ _ _ _ /_ _ _ _ _ _ /_ _ _ _ _ _ _ .","_ _ _ _ _ _ /_ _ _ _ /_ _ _ /_ _ _ /_ _ _ _ .","_ _ _ _ _ /_ _ _ /_ _ /_ _ _ _ .",
+"_ _ _ _ _ _ _ _ /_ _ _ /_ _ _ _ _ _ _ _ .","_ _ _ _ _ /_ _ _ /_ _ _ _ /_ /_ _ _ _ _ _ :/_ _ _ _ _ _ _ _ _ /_ _ _ /_ _ _ _ _ _ _ _ _ .","_ _ _ _ _ _ _ _ _ _ /_ _ /_ _ _ /_ _ _ _ /_ _ /_ _ _ _ .","_ _ _ _ _ '/_ _ _ /_ _ /_ _ _ _ _ _ _ /_ _ /_ _ /_ _ _ _ _ /_ _ _ _ _ _ _ /_ _ /_ _ /_ _ _ /_ /_ _ _ _ _ _ _ _ _ .","_ _ _ '_ /_ _ _ _ _ _ /_ _ /_ _ _ _ _ _ /_ _ _ _ /_ _ _ _ _ _ _ _ .","_ _ _ _ _ /_ _ _ /_ _ _ _ _ _ _ _ .",
+"_ _ _ _ _ /_ _ _ _ _ /&/_ _ _ /_ _ _ _ !","_ _ _ _ _ _ /_ _ _ _ /_ /_ _ _ _ _ /(_ _ _ -_ _ _ ).","_ _ _ _ _ /_ _ _ _ _ /_ _ _ /_ _ _ /_ _ _ _ _ /_ _ _ _ _ _ .","_ _ /_ _ _ _ /_ _ /_ _ _ _ /_ _ _ _ _ _ _ _ _ .","_ _ /_ _ _ _ _ !","_ _ /_ _ /_ _ _ _ _ _ /_ _ _ ,/_ _ _ _ /_ _ .","_ _ _ _ _ _ /_ _ _ _ _ ,/_ _ _ /_ _ _ _ _ _ _ _ _ /_ _ _ _ _ .","_ _ _ _ _ /_ _ _ _ ;/_ _ '_ /_ _ _ /_ _ _ _ /_ _ _ /_ _ /_ _ _ _ _ /_ _ _ _ _ _ _ _ /_ _ _ _ _ .",
+"_ _ _ _ _ _ /_ _ _ '_ /_ _ _ /_ _ _ /_ _ /_ _ _ _ _ _ _ .","_ _ _ _ _ /_ _ _ /_ _ /_ _ _ /_ _ _ _ _ _ _ _ _ /_ _ _ _ /_ _ _ _ /_ _ _ _ _ _ /_ _ _ _ /_ _ _ .","_ _ /_ /_ _ _ _ _ _ _ _ /_ _ _ _ _ _ _ _ _ _ /_ _ _ _ _ _ /_ _ /_ _ _ _ _ _ _ _ /_ _ /_ _ _ /_ _ _ _ /_ _ _ _ _ _ /_ _ _ /_ _ /_ _ _ .","_ _ _ _ _ /_ _ _ _ _ _ _ _ _ _ _ _ _ /_ _ _ _ /_ _ _ _ _ _ _ _ .","_ _ _ _ _ _ /_ _ _ _ /_ _ _ /_ /_ _ _ _ _ /_ _ _ _ _ _ _ .",
+"_ _ _ _ /_ _ _ _ _ /_ _ _ _ _ _ _ _ _ _ _ /_ _ /_ _ /_ /_ _ _ _ _ /_ _ _ /_ _ _ _ _ /_ _ _ _ _ _ /_ _ _ _ /_ _ _ /_ _ _ _ _ _ _ _ .","_ _ _ _ /_ _ _ _ _ /_ _ _ _ _ /_ _ _ /_ _ _ _ _ /_ _ _ _ _ _ _ _ _ _ _ ,/_ _ _ /_ _ _ /_ _ _ _ _ _ /_ _ _ _ _ .","_ _ _ _ _ _ /_ _ _ _ _ _ /_ /_ _ _ _ _ _ _ _ _ /_ _ _ _ /_ _ _ _ _ _ /_ _ _ _ _ _ /_ _ _ _ /_ _ _ _ _ _ _ _ _ /_ _ /_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ .","_ _ _ _ _ _ /_ _ _ _ /_ _ _ _ /_ _ _ _ /_ _ _ _ /_ _ /_ _ _ _ /_ _ _ /_ _ _ _ /_ _ /_ _ _ _ /_ _ _ _ /_ _ _ /_ _ _ /_ _ _ _ /_ _ _ _ _ _ /_ _ _ _ _ _ .",
+"_ _ _ _ _ /_ _ _ /_ /_ _ _ _ _ /_ _ _ /_ _ _ _ _ _ /_ _ /_ _ _ /_ _ _ _ _ /_ _ _ _ .","_ _ /_ _ _ /_ _ _ _ /_ _ /_ _ _ _ /_ _ _ _ /_ _ _ _ _ _ _ /_ _ _ _ _ _ _ _ _ _ .","_ _ /_ _ _ /_ _ /_ _ _ _ _ _ _ _ _ _ /_ _ _ _ _ _ /_ _ /_ _ _ /_ _ _ _ _ _ _ _ _ /_ _ /_ _ _ _ _ _ .","_ _ /_ _ _ _ /_ _ _ _ _ _ _ /_ _ _ _ /_ _ _ /_ _ _ _ _ _ -_ _ _ _ :/_ _ /_ _ _ _ _ /_ _ /_ /_ _ _ /_ _ /_ _ _ _ _ _ _ _ .",
+"_ _ _ _ _ /_ _ _ _ /_ _ /_ /_ _ _ _ _ _ /_ _ _ _ /_ _ /_ _ /_ _ _ _ .","_ _ _ _ _ _ _ _ /_ _ _ /_ _ _ _ _ _ /_ _ /_ _ _ /_ _ _ _ /_ _ /_ _ _ /_ _ _ _ ,/_ _ _ _ /_ _ _ _ /_ _ _ /_ _ _ _ /_ _ _ _ _ _ _ _ _ _ /_ _ _ _ _ _ _ _ _ _ /_ _ /_ _ /_ _ _ _ _ _ /_ _ _ _ /_ _ _ _ _ _ _ /_ _ _ _ _ /_ _ _ _ _ .","_ _ _ _ _ _ _ /_ /_ _ _ _ _ /_ _ _ _ /_ _ _ _ _ _ _ /_ _ _ _ _ _ _ _ _ _ _ _ /_ _ _ _ /_ _ _ /_ _ _ _ _ _ _ _ /_ _ _ /_ _ _ _ _ /_ _ /_ _ _ _ _ ",
+"_ _ _ '_ /_ _ _ _ _ /_ _ _ /_ _ _ _ '/_ _ _ _ _ _ -_ _ _ _ ."]
+var hintc=["partner your Never over screw","a wear at Always crime scene gloves","be Never unreachable","best a no way Tell if one Second There secret yourself to you third keep is The other person must","don't waste good You","apologize Except weakness Its a among sign friends of Never","you Always be lie when specific","take anything Never granted for","without a Never go anywhere knife",
+"involved case personally get a Never on","walk the done When job away is","coworker date Never a","lawyer Never involve a ever","Bend line the it don't break","Always team a work as","the thinks have break If it upper hand they someone","easier It's seek permission forgiveness ask than to","in Never bother interrogation ever Gibbs","you mess want live Marine's if with a Never coffee to",
+"way Two they never you to notice First follow second only ways","watchers the watch Always","you being feel like you're are probably If played","case Your lead","as coincidence such There no thing is","you is they are to someone out seems get it If","First and things children Hide the women","up mess your own Clean","Sometimes You're Wrong","to an call is head a slap of the up face back insult wake",
+"geek doubt When in speak","times that book insist them in your the fiction as repeat When possible characters based are upon many word","them yourself and don't work won't fix the computers technicians When computer","the truth Always speak","what matter provocation Always respectful be and the no polite","of polite the all opportunities get while to revenge language Take maintaining nerd possible very",
+"implacable you to vocabulary will intimidate Use interrogate the and person","leaders up them upon to by stare stand Be your using down gang height willing","ask that they won't Don't to so have tell","Avoid heights","Avoid when DiNozzo around heights","card the Always MIT play","lie Abby Never to","Remember birthday her","the family team not as desertion permitted Treat",
+"not Scientists on rely do luck","be to a gut because Gibbs' he lucky is allowed not scientist","to computer Don't forget your defrag","evidence Trust the","Trust team the & Gibbs","Always keep Caf Pow spare a","people Dress other codes are for","equipment kind Be your to","Be happy","it annoys you If kill","questions ask later first Attack","Drive avoid way to roadside fast best it's the bombs",
+"Knives out bullets don't run of","when Never the your sidelines you on need people sit","hit the ALWAYS attractive on in If her involved case is female a sexually","underestimate opponent Never your","movie seek Always analogy out a","Jones the speech Fugitive every Tommy Lee Take to from a opportunity do","Tommy accent When impressions Lee doing Jones right the get",
+"than to authoritarianism humour resorting a rather Always situation defuse with","is work your you look just like around lazing it done make are Always sure but","the woman her Never date on weight ask first a","when in working not Do love undercover fall","undercover as not go anyone the boyfriend posing Do of","might be careful kiss: disguise in very man tongue whom a it you",
+"a is down he when on probie Never pick","the sufficient team very to experience morale when Maintain about even Gibbs of you be rest worried really","a with the Gibbs working to Director relationship first Develop name defer but","the coffee boss' Don't ever drink"]
+var quest=0
+var score=0
+var hintno=0
+var which_one=0
+function Confirm() {
+    if(quest==0){hintno=0; score=0; Next() }
+    else if (quest==3){
+        if(answer.value.toUpperCase()==rules[which_one].toUpperCase()||answer.value.toUpperCase()==rules2[which_one].toUpperCase())
+            {if(hintno==0){score=score+5}
+            else if(hintno==1){score=score+4}
+            else if(hintno==2){score=score+3}
+            else if(hintno==3){score=score+2}
+            number.innerHTML=numbers[which_one]+ "&#10004;";
+            setTimeout(Zero,1000) }
+        else{number.innerHTML=numbers[which_one]+ "&#10060;";
+            hint1.innerHTML=rules[which_one];
+            hint2.innerHTML="";
+            hint3.innerHTML="" 
+            setTimeout(Zero,4000) }
+        quest=0}
+    else{   if(answer.value.toUpperCase()==rules[which_one].toUpperCase()||answer.value.toUpperCase()==rules2[which_one].toUpperCase())
+                {if(hintno==0){score=score+5}
+                else if(hintno==1){score=score+4}
+                else if(hintno==2){score=score+3}
+                else if(hintno==3){score=score+2}
+                number.innerHTML=numbers[which_one]+ "&#10004;";
+                setTimeout(Next,1000) }
+            else{number.innerHTML=numbers[which_one]+ "&#10060;";
+                 hint1.innerHTML=rules[which_one];
+                 hint2.innerHTML="";
+                 hint3.innerHTML="";
+                 setTimeout(Next,4000) }
+        }}
+function Zero(){
+    number.innerHTML="You scored "+score+"%";
+    document.getElementById("answer").value ="";
+    hint1.innerHTML="Press Confirm to Restart";
+    hint2.innerHTML="";
+    hint3.innerHTML=""}
+function Next(){
+    which_one=Math.floor(Math.random()*rules.length);
+    number.innerHTML=numbers[which_one];
+    document.getElementById("answer").value ="";
+    hint1.innerHTML="";
+    hint2.innerHTML="";
+    hint3.innerHTML="";
+    quest=quest+1;
+    hintno=0 }
+function Hint(){
+    if(hintno==0){hint1.innerHTML=hinta[which_one];
+                        hintno=1}
+    else if(hintno==1){hint2.innerHTML=hintb[which_one];
+                        hintno=2}
+    else if(hintno==2){hint3.innerHTML=hintc[which_one];
+                        hintno=3}
+    else if(hintno==3){} } 
+addEventListener("keyup", MyKeyDownHandler);
+</script>
+</body>
+</html> 
