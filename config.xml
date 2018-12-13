@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:installLocation="preferExternal">
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        android:installLocation = "preferExternal"
         id          = "learnncisrules.splodge97.edu.mit.scratch"
         versionCode = "10" 
         version     = "1.0.0" >
